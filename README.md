@@ -21,7 +21,7 @@ mod仅对服务端broadcast的logChatMessage方法调用的params参数进行mix
 <img width="1303" height="446" alt="image" src="https://github.com/user-attachments/assets/ac88c660-e0b5-493e-9890-fe3f13916ad4" />
 
 ## 我的做法
-1：修改函数调用参数 2\~3：指定方法和被修改参数反代方法 4~5：获取待修改与目标玩家实体 6：确保玩家实体不为null的情况下 7：重新构造一个“玩家名称而非玩家显示名称”的参数 8：用构造的参数覆盖4参数列表中的参数
+1：修改函数调用参数 2：指定需要注入的方法 3：被修改参数的方法 4：获取待修改的方法的所有参数列表 5：获取目标玩家实体（后面用于获取玩家原始名称） 6：确保玩家实体不为null的情况下 7：重新构造一个用玩家原始名称的参数 8：用构造的参数覆盖4参数列表中的参数
 <img width="1551" height="398" alt="image" src="https://github.com/user-attachments/assets/fceece6f-f19e-4d1b-8f91-aef4341900af" />
 
 1：这就是前面的5，即玩家实体，用于获取玩家名称 2：这个地方就是我注入并被替换的参数（如果玩家不是null则替换） 3：此处未更改，所以玩家看到的是customname mod修改过的名称，而服务端后台输出的则是玩家原始名称
