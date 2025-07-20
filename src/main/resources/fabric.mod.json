@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "mcdrnamefix",
+	"version": "${version}",
+	"name": "mcdrnamefix",
+	"description": "Fix the MCDR parsing issue caused by the customname mod",
+	"authors": [
+		"chenjunfu2"
+	],
+	"contact": {
+		"homepage": "NULL",
+		"sources": "NULL"
+	},
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+	},
+	"mixins": [
+		"mcdrnamefix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
